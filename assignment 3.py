@@ -53,14 +53,20 @@ def Subpeptides (pep):
     sub.append(pep)
     return sub
 
+
+
 if __name__ == "__main__":
-    QE = input("Enter The Antibiotic: ")
-    q = Subpeptides(QE)
-    length = len(q)
-    result = []
-    for i in range (0,length,1):
-        summation = MassSpectrum(q[i])
-        result.append(summation)
-    result.sort()
-    print(result)
+    uu = []
+    uu = list(map(str, input().split()))
+    for j in range (0,len(uu),1):
+        QE = uu[j]
+        q = Subpeptides(QE)
+        length = len(q)
+        result = []
+
+        for i in range (0,length,1):
+            summation = MassSpectrum(q[i])
+            result.append(summation)
+        result.sort()
+        print(result)
 

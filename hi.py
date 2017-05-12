@@ -36,5 +36,13 @@
 # TR = input("enter letter: ")
 # print(CONV[TR])
 
-i = 5%5
-print(i)
+from itertools import permutations
+from itertools import product
+
+ll1 = 'ILEM'
+ll = list(map(str, ll1))
+print(ll)
+# kk = list(permutations(ll))
+# print(kk)
+op = list(product(*ll))
+print(op)
